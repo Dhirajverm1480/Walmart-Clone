@@ -35,7 +35,7 @@ document.addEventListener('keydown', (e) => {
     if(e.key === 'Escape'){
         SideBar.style.display = 'none';
     }
-    else if(e.key=== "Shift"){
+    else if(e.key=== "Control"){
         SideBar.style.display = 'block';
     }
 })
