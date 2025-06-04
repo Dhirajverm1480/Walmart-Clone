@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================header ===================================== */
+
+header {
+    background: #0053e2;
+}
+
+.top-nav {
+    padding: 10px 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuBar{
+    width: 20px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 50px;
+    cursor: pointer;
+}
+
+.deliveryBox {
+    padding: 10px;
+    width: 314px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #002e99;
+    border-radius: 30px;
+}
+
+.deliveryBox img {
+    width: 36px;
+    cursor: pointer;
+}
+
+.deliveryBox-info {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.search-wrapper {
+    display: flex;
+    background: #fff;
+    width: 1192px;
+    height: 52px;
+    border-radius: 30px;
+}
+
+.search-wrapper input {
+    width: 95%;
+    height: 100%;
+    padding-left: 3%;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+}
+
+.search-wrapper button {
+    width: 5%;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.myitemBox {
+    width: 113px;
+    height: 52px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.myitemBox div {
+    display: flex;
+    flex-direction: column;
+}
+
+.myitemBox .myItemDropDown{
+    position: absolute;
+    visibility: hidden;
+    top: 54px;
+    width: 100%;
+    padding: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 1px 1px 1px grey;
+}
+
+.myitemBox:hover{
+    background-color:  #002e99;
+}
+
+.myitemBox:hover .myItemDropDown{
+    visibility: visible;
+}
+
+.accountBox, .cartBox {
+    gap: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ========================================= Main ==================================================== */
+
+main{
+    display: flex;
+    position: relative;
+    /* background-color: yellow; */
+    height: 100vh;
+}
+
+aside{
+    width: 400px;
+    box-shadow: 1px 1px 1px rgb(212, 208, 208);
+    border-right: 1px solid rgb(212, 208, 208);
+}
+
+#sideBar{
+    display: none;
+}
+
+article{
+    /* background-color: blue;   */
+    width: 100%;
+}
