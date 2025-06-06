@@ -18,12 +18,14 @@ header {
 }
 
 .menuBar{
+    display: none;
     width: 20px;
     cursor: pointer;
 }
 
 .logo img {
-    width: 50px;
+    margin-left: 10px;
+    width: 30px;
     cursor: pointer;
 }
 
@@ -52,24 +54,28 @@ header {
 .search-wrapper {
     display: flex;
     background: #fff;
-    width: 1192px;
+    width: 588px;
     height: 52px;
     border-radius: 30px;
 }
 
 .search-wrapper input {
-    width: 95%;
+    width: 90%;
     height: 100%;
     padding-left: 3%;
-    border-radius: 30px;
+    /* border-radius: 30px; */
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
     outline: none;
     border: none;
 }
 
 .search-wrapper button {
-    width: 5%;
+    width: 10%;
     border: none;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     outline: none;
     background-color: #fff;
     cursor: pointer;
@@ -123,8 +129,6 @@ header {
 main{
     display: flex;
     position: relative;
-    /* background-color: yellow; */
-    height: 100vh;
 }
 
 aside{
@@ -137,7 +141,28 @@ aside{
     display: none;
 }
 
-article{
-    /* background-color: blue;   */
+.product-section{
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    color: #000;
+    text-decoration: none;
+}
+
+.product-wrapper{
+    width: 185px;
+    /* height: 300px; */
+    border: 1px solid rgb(235, 232, 232);
+    border-radius: 30px;
+    box-shadow: 1px 1px 1px rgb(212, 208, 208);
+}
+
+.product-wrapper:hover{
+    background: rgba(255, 0, 0, 0.062);
+    /* transform: rotateY(180deg) */
+}
+
+.wrapper-img{
+    width: 180px;
 }

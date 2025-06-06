@@ -9,6 +9,21 @@ const dataFetchng = async () => {
         const data = await response.json()
         console.log("Data: ", data.products)
 
+        let productSection = document.querySelector('.product-section');
+
+        data.products.forEach((product) => {
+            let productWrapper = document.createElement('div');
+            productWrapper.classList.add('product-wrapper');
+
+            productWrapper.innerHTML = `
+                <img src="${product.thumbnail}" alt="${product.title}" class="wrapper-img"/>
+                <p><strong>${product.title}</strong></p>
+                <p>${product.price}</p>
+            `;
+
+            productSection.appendChild(productWrapper);
+        });
+
     } catch (error) {
         console.log("Error: ", error)
     }
