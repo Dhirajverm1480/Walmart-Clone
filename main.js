@@ -5,7 +5,7 @@ const dataFetchng = async () => {
         if (!response.ok) {
             throw new Error(`Error: ${response.status}`);
         }
-       
+
         const data = await response.json()
         console.log("Data: ", data.products)
 
@@ -15,11 +15,15 @@ const dataFetchng = async () => {
             let productWrapper = document.createElement('div');
             productWrapper.classList.add('product-wrapper');
 
-            productWrapper.innerHTML = `
-                <img src="${product.thumbnail}" alt="${product.title}" class="wrapper-img"/>
-                <p><strong>${product.title}</strong></p>
-                <p>${product.price}</p>
-            `;
+            productWrapper.innerHTML =
+            `
+                <a href="productInfo.html?id=${product.id}">
+                    <img src="${product.thumbnail}" alt="${product.title}" class="wrapper-img"/>
+                    <p><strong>${product.title}</strong></p>
+                    <p>${product.price}</p>
+                </a>
+            `
+                ;
 
             productSection.appendChild(productWrapper);
         });
@@ -37,20 +41,20 @@ let SideBar = document.getElementById('sideBar')
 
 MenuBar.addEventListener('click', (e) => {
     console.log("I am click");
-    if(SideBar.style.display === 'block'){
+    if (SideBar.style.display === 'block') {
         SideBar.style.display = 'none'
     }
-    else{
+    else {
         SideBar.style.display = 'block'
     }
-    
+
 })
 
 document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape'){
+    if (e.key === 'Escape') {
         SideBar.style.display = 'none';
     }
-    else if(e.key=== "Control"){
+    else if (e.key === "Control") {
         SideBar.style.display = 'block';
     }
 })
