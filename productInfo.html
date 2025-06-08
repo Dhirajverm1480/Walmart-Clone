@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="assets/image1.png" />
@@ -9,8 +10,9 @@
     <link rel="stylesheet" href="productInfo.css">
     <title>ProductInfo</title>
 </head>
+
 <body>
-        <header>
+    <header>
         <nav class="top-nav">
             <div id="menuBar" class="menuBar">
                 <img src="assets/bars-solid.svg" alt="">
@@ -54,5 +56,26 @@
         </nav>
     </header>
     <p>productInfo</p>
+
+    <script src="main.js">
+    </script>
+
+    <script>
+        const params = new URLSearchParams(window.location.search)
+        const productId = params.get('id')
+
+        console.log("ID: ", productId)
+
+        fetch(`https://dummyjson.com/products/${productId}`)
+            .then(res => res.json())
+            .then(product => {
+                // Display product info here
+                console.log(product);
+            })
+            .catch(err => {
+                console.error('Failed to load product', err);
+            });
+    </script>
 </body>
+
 </html>
