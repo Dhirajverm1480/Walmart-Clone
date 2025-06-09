@@ -1,0 +1,19 @@
+.cartMain{
+    display: flex;
+}
+
+.cartInfoBox{
+    margin: 10px 5px;
+    width: 60%;
+    /* height: 100px; */
+    box-shadow: 1px 1px 10px #e0dcdc;
+    border-radius: 10px;
+}
+
+.cartItem{
+    display: flex;
+}
+
+.cartItem img{
+    width: 100px;
+}

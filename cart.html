@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="assets/image1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="responsive.css">
-    <title>Walmart-clone</title>
+    <title>Cart</title>
 </head>
-
 <body>
     <header>
         <nav class="top-nav">
@@ -48,22 +47,48 @@
                 <div>Sign In</div>
                 <div>Account</div>
             </div>
-            <a href="cart.html" class="cartBox">
+            <div class="cartBox">
                 <div>🛒</div>
                 <div>$ 0.00</div>
-            </a>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <aside id="sideBar" class="sideBar">
-            fgfj
-        </aside>
-        <section class="product-box">
-                <div class="product-section"></div>
-        </section>
+    <main class="cartMain">
+        <div class="cartInfoBox">
+            <div class="cartItem">
+                
+            </div>
+        </div>
+        <div class="paymentBox"></div>
     </main>
-    <script src="main.js"></script>
-</body>
 
+    <script>
+        let cartParams = new URLSearchParams(window.location.search);
+        let cartId = cartParams.get('id');
+        console.log("CartId", cartId)
+
+        fetch(`https://dummyjson.com/products/${cartId}`)
+        .then(response => response.json())
+        .then(cart => {
+            console.log(cart)
+
+            let cartItem = document.querySelector('.cartItem');
+            cartItem.innerHTML = `
+                <img src="${cart.images[0]}" alt="">
+                <div class="cartItemInfo">
+                    <h3>${cart.title}</h3>
+                    <h4>${cart.brand}</h4>
+                    <div>
+                        <h6>${cart.price}</h6>
+                        <h6>${cart.rating}</h6>
+                    </div>
+                </div>
+            `
+
+            document.querySelector('.cartInfoBox').appendChild(cartItem)
+
+        })
+    </script>
+</body>
 </html>

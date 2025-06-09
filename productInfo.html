@@ -6,8 +6,9 @@
     <link rel="icon" type="image/svg+xml" href="assets/image1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="productInfo.css">
+    <link rel="stylesheet" href="responsive.css">
+    
     <title>ProductInfo</title>
 </head>
 
@@ -17,7 +18,7 @@
             <div id="menuBar" class="menuBar">
                 <img src="assets/bars-solid.svg" alt="">
             </div>
-            <a href="#  " class="logo"><img src="assets/image1.png" alt=""></a>
+            <a href="index.html" class="logo"><img src="assets/image1.png" alt=""></a>
 
             <div class="deliveryBox">
                 <img src="assets/image.png" alt="">
@@ -55,8 +56,21 @@
             </div>
         </nav>
     </header>
-    <p>productInfo</p>
-
+    <!-- <p>productInfo</p> -->
+    <main>
+        <section class="productInfo-section">
+            <div class="">
+                <div class="img-container"></div>
+                <div class="btnBox">
+                    <div class="cartBtnBox"></div>
+                     
+                </div>
+            </div>
+            <div class="productInfo-container">
+                <div class="iteminfo"></div>
+            </div>
+        </section>
+    </main>
     <script src="main.js">
     </script>
 
@@ -70,7 +84,35 @@
             .then(res => res.json())
             .then(product => {
                 // Display product info here
-                console.log(product);
+                console.log("Product", product);
+
+                product.images.forEach(imgUrl => {
+                    let imgBox = document.createElement("div");
+                    imgBox.classList.add('img-box')
+                    imgBox.innerHTML = `
+                        <img src="${imgUrl}" alt="${product.title}"/>
+                    `
+                    document.querySelector('.img-container').appendChild(imgBox);
+                });
+
+                let cartBtnBox = document.querySelector('.cartBtnBox');
+                cartBtnBox.innerHTML = `
+                    <a href="cart.html?id=${product.id}" class="cart-btn" >Add to Cart</a>
+                `
+                document.querySelector('.btnBox').appendChild(cartBtnBox)
+
+                let itemInfo = document.querySelector('.iteminfo')
+                    itemInfo.innerHTML = `
+                        <h1>${product.title}</h1>
+                        <h2>${product.description}</h2>
+                        <h4>${product.brand}</h4>
+                        <hr>
+                        <h4>${product.price}</h4>
+                        <h4>${product.category}</h4>
+                        <h4>${product.stock}</h4>
+                        
+                    `
+                document.querySelector('.productInfo-container').appendChild(itemInfo)
             })
             .catch(err => {
                 console.error('Failed to load product', err);

@@ -1,0 +1,28 @@
+.productInfo-section{
+    display: flex;
+    /* background: red; */
+    /* height: 100vh; */
+    width: 100%;
+}
+
+.img-box{
+    width: 500px;
+    height: 100%;
+    box-shadow: 10px 10px 10px rgb(243, 240, 240);
+    border-radius: 30px;
+    /* background: yellow; */
+}
+
+.img-box img{
+    width: 100%;
+}
+
+.cartBtnBox .cart-btn{
+    padding: 10px 30px;
+    margin: 10px;
+    border-radius: 30px;
+    background: #0053e2;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}

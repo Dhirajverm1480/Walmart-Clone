@@ -24,7 +24,6 @@ const dataFetchng = async () => {
                 </a>
             `
                 ;
-
             productSection.appendChild(productWrapper);
         });
 
