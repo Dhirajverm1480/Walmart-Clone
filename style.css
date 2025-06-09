@@ -142,6 +142,7 @@ aside{
 }
 
 .product-section{
+    margin: 10px 0 0 10px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -151,18 +152,23 @@ aside{
 }
 
 .product-wrapper{
+    padding: 10px;
     width: 185px;
-    /* height: 300px; */
+    /* background-color: #dbd9d988; */
     border: 1px solid rgb(235, 232, 232);
-    border-radius: 30px;
+    border-radius: 5px;
     box-shadow: 1px 1px 1px rgb(212, 208, 208);
 }
 
 .product-wrapper:hover{
     background: rgba(255, 0, 0, 0.062);
-    /* transform: rotateY(180deg) */
+}
+
+.product-wrapper a{
+    color: #000;
+    text-decoration: none;
 }
 
 .wrapper-img{
-    width: 180px;
+    width: 160px;
 }
