@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+   <header>
         <nav class="top-nav">
             <div id="menuBar" class="menuBar">
                 <img src="assets/bars-solid.svg" alt="">
@@ -50,10 +50,10 @@
                 <div>Sign In</div>
                 <div>Account</div>
             </div>
-            <div class="cartBox">
+            <a href="cart.html" class="cartBox">
                 <div>🛒</div>
                 <div>$ 0.00</div>
-            </div>
+            </a>
         </nav>
     </header>
     <!-- <p>productInfo</p> -->
@@ -86,37 +86,61 @@
                 // Display product info here
                 console.log("Product", product);
 
-                product.images.forEach(imgUrl => {
-                    let imgBox = document.createElement("div");
-                    imgBox.classList.add('img-box')
-                    imgBox.innerHTML = `
-                        <img src="${imgUrl}" alt="${product.title}"/>
-                    `
-                    document.querySelector('.img-container').appendChild(imgBox);
-                });
-
-                let cartBtnBox = document.querySelector('.cartBtnBox');
-                cartBtnBox.innerHTML = `
-                    <a href="cart.html?id=${product.id}" class="cart-btn" >Add to Cart</a>
+                let imgBox = document.createElement("div");
+                imgBox.classList.add('img-box')
+                imgBox.innerHTML = `
+                    <img src="${product.images[0]}" alt="${product.title}"/>
                 `
-                document.querySelector('.btnBox').appendChild(cartBtnBox)
+                document.querySelector('.img-container').appendChild(imgBox);
 
-                let itemInfo = document.querySelector('.iteminfo')
-                    itemInfo.innerHTML = `
-                        <h1>${product.title}</h1>
-                        <h2>${product.description}</h2>
-                        <h4>${product.brand}</h4>
-                        <hr>
-                        <h4>${product.price}</h4>
-                        <h4>${product.category}</h4>
-                        <h4>${product.stock}</h4>
-                        
-                    `
-                document.querySelector('.productInfo-container').appendChild(itemInfo)
+                // Add to cart btn
+
+                let cartBtn = document.createElement('button')
+                cartBtn.classList.add('cart-btn')
+                cartBtn.innerHTML = 'Add to Cart'
+
+                let cartBtnBox = document.querySelector('.cartBtnBox')
+                cartBtnBox.innerHTML= ``;
+                cartBtnBox.appendChild(cartBtn)
+
+                cartBtn.addEventListener('click', () => {
+                    console.log('Add to cart clicked')
+                    addToCart(product)
+                })
+
             })
             .catch(err => {
                 console.error('Failed to load product', err);
             });
+
+
+            function addToCart (product) {
+
+                // let cartRaw = localStorage.getItem('cart');
+                // let cartData = [];
+
+                // try {
+                //     cartData = cartRaw ? JSON.parse(cartRaw) : [];
+                // } catch (e) {
+                //     console.warn('Invalid JSON in localStorage, clearing cart...');
+                //     localStorage.removeItem('cart');
+                //     cartData = [];
+                // }
+
+                
+                let cartData = JSON.parse(localStorage.getItem('cart')) || [];
+                let existingData = cartData.find( item => item.id === product.id);
+                if(existingData){
+                    existingData.quantity += 1
+                } else{
+                    cartData.push({id: product.id, quantity: 1})
+                }
+
+                localStorage.setItem('cart', JSON.stringify(cartData))
+                alert('product added to cart')
+            }
+            
+
     </script>
 </body>
 
