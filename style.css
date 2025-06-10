@@ -172,3 +172,14 @@ aside{
 .wrapper-img{
     width: 160px;
 }
+
+.cart-btn{
+    padding: 10px 20px;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #000000;
+    text-decoration: none;
+}

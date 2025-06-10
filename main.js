@@ -19,9 +19,10 @@ const dataFetchng = async () => {
             `
                 <a href="productInfo.html?id=${product.id}">
                     <img src="${product.thumbnail}" alt="${product.title}" class="wrapper-img"/>
-                    <p><strong>${product.title}</strong></p>
-                    <p>${product.price}</p>
+                    <h4> $ ${product.price}</h4>
+                    <p>${product.title}</p>
                 </a>
+                <button class="cart-btn"> Add to Cart</button>
             `
                 ;
             productSection.appendChild(productWrapper);
