@@ -1,3 +1,5 @@
+import addToCart from './utility/addToCart.js'
+
 const dataFetchng = async () => {
     try {
         console.log("Working")
@@ -16,8 +18,10 @@ const dataFetchng = async () => {
             productWrapper.classList.add('product-wrapper');
 
             productWrapper.innerHTML =
-            `
+                `
+                <button class="wish-btn">🤍</button>
                 <a href="productInfo.html?id=${product.id}">
+                    
                     <img src="${product.thumbnail}" alt="${product.title}" class="wrapper-img"/>
                     <h4> $ ${product.price}</h4>
                     <p>${product.title}</p>
@@ -26,6 +30,16 @@ const dataFetchng = async () => {
             `
                 ;
             productSection.appendChild(productWrapper);
+
+            const cartBtn = productWrapper.querySelector('.cart-btn');
+            cartBtn.addEventListener('click', () => {
+                addToCart(product)
+            })
+
+            const wistBtn = productWrapper.querySelector('.wish-btn');
+            wistBtn.addEventListener('click', () => {
+                wistBtn.innerHTML = '🧡';
+            })
         });
 
     } catch (error) {
@@ -39,7 +53,7 @@ dataFetchng()
 let MenuBar = document.getElementById('menuBar');
 let SideBar = document.getElementById('sideBar')
 
-MenuBar.addEventListener('click', (e) => {
+MenuBar.addEventListener('click', () => {
     console.log("I am click");
     if (SideBar.style.display === 'block') {
         SideBar.style.display = 'none'
