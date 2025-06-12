@@ -25,19 +25,26 @@ fetch(`https://dummyjson.com/products/${productId}`)
 
         let ItemInfo = document.querySelector('.itemInfo')
         ItemInfo.innerHTML = `
+            <div class="top-div">
+                <p>100 + bought since yesterday</p>
+                <p>In 100 + people's cart</p>
+            </div>
+            <div class="bestSeller">
+                <p>BestSeller</p>
+            </div>
             <a href="#" class="brand-name">${product.brand}</a>
-            <h3 class="product-title">${product.title}</h3>
+            <h1 class="product-title">${product.title}</h1>
             <div class="review-container">
-                <span class="stars"></span>
-                <span class="review">${product.review}</span>
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating">(${product.rating}) </span>
                 <hr>
-                <a href="#" class="rating">${product.rating}ratings</a>
+                <a href="#rating_section" class="review">3 ratings</a>
             </div>
             <hr>
             <h3 class="item-description-heading">About this Item</h3>
             <p class="item-description">${product.description}</p>
             <hr>
-            <h3 class="item-glance">At a glance</h3>
+            <h2 class="item-glance-heading">At a glance</h2>
             <div class="glance-div">
                 <div class="glance-brand glance">
                     <h4 class="glance-title">Brand</h4>
@@ -73,6 +80,7 @@ fetch(`https://dummyjson.com/products/${productId}`)
 
         let paymentBox = document.querySelector('.payment-box')
         paymentBox.innerHTML = `
+            
             <span class="price-title">Now</span><span class="price"> $${product.price}</span>
             <br>
             <span class="discount-title">You Save</span><span class="discountPercentage"> $${product.discountPercentage}</span>

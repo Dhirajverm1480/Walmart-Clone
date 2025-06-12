@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:sans-serif;
 }
+
+
 
 /* =====================================header ===================================== */
 
@@ -127,10 +130,10 @@ header {
 
 /* ========================================= Main ==================================================== */
 
-main{
+/* main{
     display: flex;
     position: relative;
-}
+} */
 
 aside{
     width: 400px;
