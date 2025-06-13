@@ -1,30 +1,30 @@
-import addToCart from './utility/addToCart.js'
+import addToCart from "./utility/addToCart.js";
 
-const params = new URLSearchParams(window.location.search)
-const productId = params.get('id')
+const params = new URLSearchParams(window.location.search);
+const productId = params.get("id");
 
-console.log("ID: ", productId)
+console.log("ID: ", productId);
 
 fetch(`https://dummyjson.com/products/${productId}`)
-    .then(res => res.json())
-    .then(product => {
-        // Display product info here
-        console.log("Product", product);
+  .then((res) => res.json())
+  .then((product) => {
+    // Display product info here
+    console.log("Product", product);
 
-        product.images.forEach(imgUrl => {
-            let LoopOfImg = document.createElement('img');
-            LoopOfImg.src = imgUrl;
-            document.querySelector('.allImg').appendChild(LoopOfImg)
-        });
-                
-        let imgBox = document.querySelector('.img-box')
-        imgBox.innerHTML = `
+    product.images.forEach((imgUrl) => {
+      let LoopOfImg = document.createElement("img");
+      LoopOfImg.src = imgUrl;
+      document.querySelector(".allImg").appendChild(LoopOfImg);
+    });
+
+    let imgBox = document.querySelector(".img-box");
+    imgBox.innerHTML = `
             <img src="${product.images[0]}" alt="${product.title}"/>
-        `
-        document.querySelector('.img-container').appendChild(imgBox);
+        `;
+    document.querySelector(".img-container").appendChild(imgBox);
 
-        let ItemInfo = document.querySelector('.itemInfo')
-        ItemInfo.innerHTML = `
+    let ItemInfo = document.querySelector(".itemInfo");
+    ItemInfo.innerHTML = `
             <div class="top-div">
                 <p>100 + bought since yesterday</p>
                 <p>In 100 + people's cart</p>
@@ -52,9 +52,7 @@ fetch(`https://dummyjson.com/products/${productId}`)
                 </div>
                 <div class="glance-dimensions glance">
                     <h4 class="glance-title">Dimensions</h4>
-                    <p class="glance-para"><strong>Width: </Strong>${product.dimensions.width}</p>
-                    <p class="glance-para"><strong>Height: </Strong>${product.dimensions.height}</p>
-                    <p class="glance-para"><strong>Depth: </Strong>${product.dimensions.depth}</p>
+                    <p>${product.dimensions.width} x ${product.dimensions.height} x ${product.dimensions.depth} inches</p>
                 </div>
                 <div class="glance-pieces glance">
                     <h4 class="glance-title">Piece</h4>
@@ -73,62 +71,71 @@ fetch(`https://dummyjson.com/products/${productId}`)
                     <p class="glance-para"></p>
                 </div>
             </div>
-            <a href="#">Veiw all specification</a>
-            <hr>
-        `
-        document.querySelector('.productInfo-container')
+            <a class="glance-a" href="#">Veiw all specification</a>
+            <hr class="glance-hr">
+        `;
+    document.querySelector(".productInfo-container");
 
-        let paymentBox = document.querySelector('.payment-box')
-        paymentBox.innerHTML = `
+    let paymentBox = document.querySelector(".payment-box");
+    paymentBox.innerHTML = `
             
             <span class="price-title">Now</span><span class="price"> $${product.price}</span>
             <br>
             <span class="discount-title">You Save</span><span class="discountPercentage"> $${product.discountPercentage}</span>
         `;
 
-        // Add to cart btn
+    // Add to cart btn
 
-        let cartBtn = document.createElement('button')
-        cartBtn.classList.add('cart-btn')
-        cartBtn.innerHTML = 'Add to Cart'
+    let cartBtn = document.createElement("button");
+    cartBtn.classList.add("cart-btn");
+    cartBtn.innerHTML = "Add to Cart";
 
-        let cartBtnBox = document.querySelector('.cartBtnBox')
-        cartBtnBox.innerHTML= ``;
-        cartBtnBox.appendChild(cartBtn)
+    let cartBtnBox = document.querySelector(".cartBtnBox");
+    cartBtnBox.innerHTML = ``;
+    cartBtnBox.appendChild(cartBtn);
 
-        cartBtn.addEventListener('click', () => {
-            console.log('Add to cart clicked')
-            addToCart(product)
-        })
-
-    })
-    .catch(err => {
-        console.error('Failed to load product', err);
+    cartBtn.addEventListener("click", () => {
+      console.log("Add to cart clicked");
+      addToCart(product);
     });
 
+    let category = product.category;
+    console.log("Category: ", category);
+    loadProducts(category);
+  })
+  .catch((err) => {
+    console.error("Failed to load product", err);
+  });
 
-            // function addToCart (product) {
+async function loadProducts(category) {
+  try {
+    const res = await fetch(
+      `https://dummyjson.com/products/category/${category}`
+    );
+    const data = await res.json();
 
-            //     // let cartRaw = localStorage.getItem('cart');
-            //     // let cartData = [];
+    data.products.forEach((product) => {
+      let Category = document.createElement("div");
+      Category.classList.add("product-wrapper");
+      Category.innerHTML = `
+                <button class="wish-btn">🤍</button>
+                <a href="productInfo.html?id=${product.id}">
+                    
+                    <img src="${product.thumbnail}" alt="${product.title}" class="wrapper-img"/>
+                    <h4> $ ${product.price}</h4>
+                    <p>${product.title}</p>
+                </a>
+                <button class="cart-btn"> Add to Cart</button>
+      `;
 
-            //     // try {
-            //     //     cartData = cartRaw ? JSON.parse(cartRaw) : [];
-            //     // } catch (e) {
-            //     //     console.warn('Invalid JSON in localStorage, clearing cart...');
-            //     //     localStorage.removeItem('cart');
-            //     //     cartData = [];
-            //     // }
+      document.querySelector(".category-section").appendChild(Category);
 
-                
-            //     let cartData = JSON.parse(localStorage.getItem('cart')) || [];
-            //     let existingData = cartData.find( item => item.id === product.id);
-            //     if(existingData){
-            //         existingData.quantity += 1
-            //     } else{
-            //         cartData.push({id: product.id, quantity: 1, title: product.title, price: product.price, rating: product.rating, image: product.thumbnail})
-            //     }
-
-            //     localStorage.setItem('cart', JSON.stringify(cartData))
-            //     alert('product added to cart')
-            // }
+      const cartBtn = Category.querySelector('.cart-btn');
+            cartBtn.addEventListener('click', () => {
+                addToCart(product)
+            })
+    });
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  }
+}
