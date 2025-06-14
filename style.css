@@ -133,16 +133,17 @@ header {
 
 /* ========================================= Main ==================================================== */
 
-main{
+/* main{
     display: flex;
     position: relative;
-}
+} */
 
 aside{
     position: sticky;
-    top: 90px;
+    top: 85px;
     width: 400px;
     height: 400px;
+    padding: 30px;
     box-shadow: 1px 1px 1px rgb(212, 208, 208);
     border-right: 1px solid rgb(212, 208, 208);
 }
