@@ -25,15 +25,16 @@ function displayCartData() {
                 <div class="cartDetail">
                     <h2 class="cartTitle">${item.title}</h2>
                     <div class="cartMoreDetail">
-                        <span class="item-brand">${item.brand}</span>
-                        <div class="rating-price">
-                            <span class="stars"></span>
+                        <div class="rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
                             <span class="rating">${item.rating}</span>
                             <hr>
-                            <span class="price">$${item.price}</span>
                         </div>
-                        <div>${item.quantity}</div>
-                        <button class="remove-btn" data-id="${item.id}">Remove</button>
+                        <span class="price">$${item.price}</span>
+                    </div>
+                    <div class="remove-quantity">
+                      <div>${item.quantity}</div>
+                      <button class="remove-btn" data-id="${item.id}">Remove</button>
                     </div>
                 </div>
         `;

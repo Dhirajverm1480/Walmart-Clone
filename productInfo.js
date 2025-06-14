@@ -102,6 +102,8 @@ fetch(`https://dummyjson.com/products/${productId}`)
     let category = product.category;
     console.log("Category: ", category);
     loadProducts(category);
+
+    loadReviews(product);
   })
   .catch((err) => {
     console.error("Failed to load product", err);
@@ -138,4 +140,23 @@ async function loadProducts(category) {
   } catch (error) {
     console.error("Error fetching products:", error);
   }
+}
+
+function loadReviews(product){
+  product.reviews.map(review => {
+    // console.log("Review: ",review)
+    let reviewBox = document.createElement('div');
+    reviewBox.classList.add('review-box');
+    reviewBox.innerHTML = `
+      <p>${review.rating}</p>
+      <p>${review.comment}</p>
+      <p>${review.date}</p>
+      <p>${review.reviewerName}</p>
+      <p>${review.reviewerEmail}</p>
+      
+    `;
+    document.querySelector('.review-section').appendChild(reviewBox)
+  })
+
+  
 }

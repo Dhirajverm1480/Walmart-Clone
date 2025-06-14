@@ -29,24 +29,6 @@ const dataFetchng = async () => {
             `;
       productSection.appendChild(productWrapper);
 
-      if (product.category === "furniture") {
-        // console.log('Brand', product.brand)
-        let BrandBox = document.createElement("div");
-        BrandBox.classList.add("brand-box");
-        BrandBox.innerHTML = `
-                    <button class="wish-btn">🤍</button>
-                <a href="productInfo.html?id=${product.id}">
-                    
-                    <img src="${product.thumbnail}" alt="${product.title}" class="wrapper-img"/>
-                    <h4> $ ${product.price}</h4>
-                    <p>${product.title}</p>
-                </a>
-                <button class="cart-btn"> Add to Cart</button>
-                `;
-
-        document.querySelector(".brand-section").appendChild(BrandBox);
-      }
-
       const cartBtn = productWrapper.querySelector(".cart-btn");
       cartBtn.addEventListener("click", () => {
         addToCart(product);
@@ -80,7 +62,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     SideBar.style.display = "none";
   }
-  // else if (e.key === "Control") {
-  //     SideBar.style.display = 'block';
-  // }
+  else if (e.key === "Control") {
+      SideBar.style.display = 'block';
+  }
 });
