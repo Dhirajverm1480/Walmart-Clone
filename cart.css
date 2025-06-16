@@ -2,7 +2,6 @@
     display: flex;
     padding-top: 20px;
     margin: 0 24px;
-    /* background: yellow; */
 }
 
 .cart-heading{
@@ -17,7 +16,6 @@
 
 .cartItem{
     width: 821px;
-    /* height: 302px; */
     display: flex;
     flex-direction: column;
     padding:  16px 0 0 0;
@@ -79,7 +77,6 @@
 
 .cartTitle{
     width: 468px;
-    /* height: 48px; */
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -132,7 +129,7 @@
 
 .payment-section{
     width: 378px;
-    height: 501px;
+    height: 100%;
     margin-left: 20px;
     position: sticky;
     top: 90px;
