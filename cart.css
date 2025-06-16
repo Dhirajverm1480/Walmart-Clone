@@ -17,7 +17,7 @@
 
 .cartItem{
     width: 821px;
-    height: 302px;
+    /* height: 302px; */
     display: flex;
     flex-direction: column;
     padding:  16px 0 0 0;
