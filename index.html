@@ -1,62 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="assets/image1.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <title>Walmart-clone</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="top-nav">
-            <div id="menuBar" class="menuBar">
-                <img src="assets/bars-solid.svg" alt="">
-            </div>
-            <a href="index.html" class="logo"><img src="assets/image1.png" alt=""></a>
+      <nav class="top-nav">
+        <div id="menuBar" class="menuBar">
+          <img src="assets/bars-solid.svg" alt="" />
+        </div>
+        <a href="index.html" class="logo"
+          ><img src="assets/image1.png" alt=""
+        /></a>
 
-            <div class="deliveryBox">
-                <img src="assets/image.png" alt="">
-                <div class="deliveryBox-info">
-                    <p>PickUp or Delivery</p>
-                    <p>Sacramento, 99999</p>
-                </div>
+        <div class="deliveryBox">
+          <img src="assets/image.png" alt="" />
+          <div class="deliveryBox-info">
+            <p>PickUp or Delivery</p>
+            <p>Sacramento, 99999</p>
+          </div>
+        </div>
+        <div class="search-wrapper">
+          <input
+            type="search"
+            placeholder="Search Everything at Walmart online and in store"
+          />
+          <hr />
+          <button>🔎</button>
+        </div>
+        <div class="myitemBox">
+          <div>🤍</div>
+          <div>
+            <span>Reorder</span>
+            <span>My Items</span>
+          </div>
+          <div class="myItemDropDown">
+            <a href="">Reorder</a>
+            <a href="">List</a>
+            <a href="">Register </a>
+          </div>
+        </div>
+        <div class="accountBox">
+          <div>Sign In</div>
+          <div>Account</div>
+        </div>
+        <a href="cart.html" class="cartBox">
+          <div>🛒</div>
+          <div>$ 0.00</div>
+        </a>
+      </nav>
 
-            </div>
-            <div class="search-wrapper">
-                <input type="search" placeholder="Search Everything at Walmart online and in store">
-                <hr>
-                <button>🔎</button>
-            </div>
-            <div class="myitemBox">
-                <div>🤍</div>
-                <div>
-                    <span>Reorder</span>
-                    <span>My Items</span>
-                </div>
-                <div class="myItemDropDown">
-                    <a href="">Reorder</a>
-                    <a href="">List</a>
-                    <a href="">Register </a>
-                </div>
-
-            </div>
-            <div class="accountBox">
-                <div>Sign In</div>
-                <div>Account</div>
-            </div>
-            <a href="cart.html" class="cartBox">
-                <div>🛒</div>
-                <div>$ 0.00</div>
-            </a>
-        </nav>
+      <!-- <nav class="mid-nav">
+        <div class="min-nav-dropDown">
+            <img src="" alt="">
+            <button>All Departmants</button>
+            <img src="" alt="">
+        </div>
+        <div class="min-nav-dropDown">
+            <img src="" alt="">
+            <button>Services</button>
+            <img src="" alt="">
+        </div>
+        
+        <div>
+            <a href="#" class="mid-nav-a">Get it Fast</a>
+            <a href="#" class="mid-nav-a">My Items</a>
+            <a href="" class="mid-nav-a">Pharmacy Delivery</a>
+            <a href="" class="mid-nav-a">Dinner Solution</a>
+            <a href="" class="mid-nav-a">4th of July</a>
+            <a href="" class="mid-nav-a">Trending</a>
+            <a href="" class="mid-nav-a">Swim Shop</a>
+            <a href="" class="mid-nav-a">New Arrival</a>
+            <a href="" class="mid-nav-a">Walmart+</a>
+        </div>
+        
+        <div class="min-nav-dropDown">
+            <button>More</button>
+            <img src="" alt="">
+        </div>
+      </nav> -->
     </header>
 
     <main>
-        <aside id="sideBar" class="sideBar">
+      <!-- <aside id="sideBar" class="sideBar">
             <div class="side-top">
                 <a href="index.html" class="logo"><img src="assets/image1.png" alt=""></a>
                 <span>Sign in or create account</span>
@@ -92,13 +124,52 @@
             <div>
                 <p>Give Feedback</p>
             </div>
-        </aside>
+        </aside> -->
 
-        <section class="product-box">
-            <div class="product-section"></div>
-        </section>
+      <section id="home" class="product-box">
+        <div class="product-section"></div>
+      </section>
     </main>
-    <script type="module" src="main.js"></script>
-</body>
 
+    <footer>
+      <section class="footer-top-section">
+        <div class="footer-cover-div">
+          <p>We'd Love to hear what you think!</p>
+          <button>Give feedback</button>
+        </div>
+      </section>
+      <section class="footer-mid-section">
+        <a href="#home" class="footer-a">All Departments</a>
+        <a href="#home" class="footer-a">Store Directory</a>
+        <a href="#home" class="footer-a">Careers</a>
+        <a href="#home" class="footer-a">Our Company</a>
+        <a href="#home" class="footer-a">Sell on Walmart.com</a>
+        <a href="#home" class="footer-a">Help</a>
+        <a href="#home" class="footer-a">Product Recalls</a>
+        <a href="#home" class="footer-a">Accessibility</a>
+        <a href="#home" class="footer-a">Tax Exempt Program</a>
+        <a href="#home" class="footer-a">Get the Walmart App</a>
+        <a href="#home" class="footer-a">Safety Data Sheet</a>
+        <a href="#home" class="footer-a">Terms of Use</a>
+        <a href="#home" class="footer-a">Privacy Notice</a>
+        <a href="#home" class="footer-a">California Supply Chain Act</a>
+        <a href="#home" class="footer-a">Your Privacy Choices</a>
+        <a href="#home" class="footer-a">Notice at Collection</a>
+        <a href="#home" class="footer-a">AdChoices</a>
+        <a href="#home" class="footer-a"
+          >Consumer Health Data Privacy Notices</a
+        >
+        <a href="#home" class="footer-a">Brand Shop Directory</a>
+        <a href="#home" class="footer-a">Pharmacy</a>
+        <a href="#home" class="footer-a">Walmart Business</a>
+        <a href="#home" class="footer-a">#IYWYK</a>
+        <a href="#home" class="footer-a">Delete Account</a>
+      </section>
+      <section class="footer-buttom-section">
+        @ 2025 Walmart. The trademarks Walmart and the Walmart Spark design are
+        registered with the US Patent and Trademark Office. All Rights Reserved.
+      </section>
+    </footer>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>

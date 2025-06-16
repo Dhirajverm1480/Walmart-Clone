@@ -1,52 +1,116 @@
 .cartMain{
     display: flex;
     padding-top: 20px;
+    margin: 0 24px;
+    /* background: yellow; */
+}
+
+.cart-heading{
+    padding: 24px 0;
 }
 
 .cartItem-section{
-    width: 60%;
-    /* background: blue; */
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgb(226, 224, 224);
+    /* background: red; */
 }
 
 .cartItem{
-    width: 100%;
-    /* background: yellow; */
+    width: 821px;
+    height: 302px;
     display: flex;
-    border-radius: 20px;
-    padding:  0 20px 0  0;
-    margin: 0 0 20px 0;
-    /* border-bottom: 1px solid grey; */
-    box-shadow: 1px 1px 1px #e2dede;
+    flex-direction: column;
+    padding:  16px 0 0 0;
+    border-bottom: 1px solid rgb(226, 224, 224);
+}
+
+.cart-sold{
+    height: 21px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 200;
+}
+
+.cart-sold a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+}
+
+.free-shipping{
+    width: 773px;
+    height: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #002E99;
+}
+
+.cart-best-seller{
+    width: 76px;
+    height: 24px;
+    margin: 5px 0 0 0;
+    padding: 0 8px;
+    border-radius: 4px;
+    background: #E6F1FC;
+    color: #004F9A;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.cart-item-div-flex{
+    width: 773px;
+    height: 108px;
+    display: flex;
+    align-items: center;
 }
 
 .cartItem img{
-    width: 200px;
-    height: 150px;
+    width: 96px;
+    height: 96px;
+    margin-right: 8px;
 }
 
 .cartItem .cartDetail{
-    padding: 0 0 0 20px;
-    width: 600px;
+    width: 463px;
+    height: 108px;
+    display: flex;
+    flex-direction: column;
 }
 
-.cartMoreDetail{
-    height: 40px;
-    /* background-color: red; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 10px 0;
-    padding: 10px 0;
+.cartTitle{
+    width: 468px;
+    /* height: 48px; */
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2E2F32;
 }
 
-.cartMoreDetail .rating{
-    display: flex;
-    margin: 0 10px 0 0;
-    /* width: 400px; */
+.return-policy{
+    margin: 4px 0;
+    width: 463px;
+    height: 17px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #2E2F32;
 }
-.cartMoreDetail .price{
-    margin-right: 20px;
+
+.gift-div{
+    margin: 8px 0;
+    width: 463px;
+    height: 15px;
+    font-size: 12px;
+    line-height: normal;
+    font-weight: 400;
+    color: #2E2F32;
+}
+
+.price-div{
+    margin: 0 0 0 170px;
+    width: 42px;
+    height: 108px;
 }
 
 .remove-quantity{
@@ -59,11 +123,8 @@
 
 .remove-btn{
     padding: 10px 30px;
-    /* margin: 10px; */
-    /* width: 273px; */
     border: none;
     border-radius: 30px;
-    /* background: #0053e2; */
     background-color: #f17474da;
     color: #fff;
     text-decoration: none;
@@ -71,10 +132,71 @@
 }
 
 .payment-section{
-    width: 40%;
-    background-color: yellow;
-    /* width: 500px; */
-    height: 300px;
+    width: 378px;
+    height: 501px;
+    margin-left: 20px;
     position: sticky;
     top: 90px;
+}
+
+.checkout-div{
+    width: 378px;
+    height: 72px;
+    padding: 16px;
+    border: 1px solid rgb(226, 224, 224);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.checkout-btn{
+    width: 346px;
+    height: 40px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 100px;
+    color: #fff;
+    background: #0053E2;
+}
+
+.price-total-div{
+    width: 378px;
+    height: 183px;
+    padding: 0 16px 16px 16px;
+    border-top: none;
+    border-left: 1px solid rgb(226, 224, 224);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 1px 1px 1px rgb(226, 224, 224);
+}
+
+.price-div-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 0 0;
+}
+
+.taxes-div{
+    width: 346px;
+    height: 53px;
+    padding: 16px 0;
+    /* background: red; */
+}
+
+.tax-flex{
+    width: 346px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-div{
+    width: 346px;
+    height: 55px;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(226, 224, 224);
 }

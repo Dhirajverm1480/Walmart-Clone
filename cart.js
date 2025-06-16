@@ -20,28 +20,29 @@ function displayCartData() {
     const cartItem = document.createElement("div");
     cartItem.classList.add("cartItem");
     cartItem.innerHTML = `
+              <span class="cart-sold">Sold and Shipped by <a href="#">Walmart</a></span>
+              <p class="free-shipping">Free Shipping on orders over $35</p>
+              <p class="cart-best-seller">Best Seller</p>
+              <div class="cart-item-div-flex">
                 <img src="${item.image}" alt="">
-                <hr>
                 <div class="cartDetail">
-                    <h2 class="cartTitle">${item.title}</h2>
-                    <div class="cartMoreDetail">
-                        <div class="rating">
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <span class="rating">${item.rating}</span>
-                            <hr>
-                        </div>
-                        <span class="price">$${item.price}</span>
-                    </div>
-                    <div class="remove-quantity">
+                    <span class="cartTitle">${item.title}</span>
+                    <span class="return-policy">Free 90-day return</span> 
+                    <span class="gift-div">Gift eligible: original packaging</span>
+                </div>
+                <div class="price-div">
+                  <span>$${item.price}</span>
+                </div>
+                
+              </div>
+              <div class="remove-quantity">
                       <div>${item.quantity}</div>
                       <button class="remove-btn" data-id="${item.id}">Remove</button>
                     </div>
-                </div>
         `;
 
     // Append to the cart list
     cartSection.appendChild(cartItem);
-
   });
 
   document.querySelectorAll(".remove-btn").forEach((button) => {

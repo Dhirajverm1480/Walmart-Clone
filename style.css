@@ -13,11 +13,12 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
-    background: #0053e2;
 }
 
 .top-nav {
-    padding: 10px 1%;
+    height: 84px;
+    padding: 16px 24px;
+    background: #0053e2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,8 +31,8 @@ header {
 }
 
 .logo img {
-    margin-left: 10px;
-    width: 30px;
+    margin: 0 10px 0 0;
+    width: 36px;
     cursor: pointer;
 }
 
@@ -131,6 +132,17 @@ header {
     text-decoration: none;
 }
 
+/* ===================== Mid nav====================== */
+
+.mid-nav{
+    height: 48px;
+    padding: 0 24px;
+    background: #F0F5FF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* ========================================= Main ==================================================== */
 
 .sideBar{
@@ -154,7 +166,6 @@ header {
 
 .side-top span{
     background-color: #0053e2;
-    /* height: 30px; */
     padding: 10px 10px;
     border-radius: 20px;
     color: #fff;
@@ -217,4 +228,76 @@ header {
     background-color: #fff;
     color: #000000;
     text-decoration: none;
+}
+
+
+footer{
+    height: 326px;
+    padding-top: 28px;
+}
+
+.footer-top-section{
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #E9F1FE;
+}
+
+.footer-cover-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 144px;
+    padding: 24px 0;
+}
+
+.footer-top-section p{
+    width: 270px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.footer-cover-div button{
+    width: 143px;
+    height: 40px;
+    padding: 0 24px;
+    border-radius: 100px;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.footer-mid-section{
+    height: 103px;
+    padding: 16px 59px 24px 59px;
+    background: #002E99;
+    text-align: center;
+}
+
+.footer-mid-section a{
+    margin: 10px 20px;
+    height: 21px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-buttom-section{
+    height: 51px;
+    padding: 8px 0 28px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 15px;
+    background: #002E99;
+    color: #ffffff;
 }
