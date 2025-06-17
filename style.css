@@ -143,6 +143,49 @@ header {
     gap: 10px;
 }
 
+.depart-btn, .service-btn, .more-btn{
+    /* width: 161px; */
+    height: 32px;
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    background: none;
+    color: #001E60;
+    cursor: pointer;
+}
+
+.depart-btn:hover, .service-btn:hover, .more-btn:hover{
+    border-radius: 100px;
+    border: 1px solid #d4d4d4;
+}
+
+.line-stick{
+    width: 19px;
+    height: 20px;
+    padding: 0 8px;
+    color: #0053E2;
+    /* border: 1px solid #0053E2; */
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: 400;
+}
+
+.mid-nav-a{
+    height: 20px;
+    padding: 0 8px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: 400;
+    color: #001E60;
+    cursor: pointer;
+}
+
+.mid-nav-a:hover{
+    text-decoration: underline;
+}
 /* ========================================= Main ==================================================== */
 
 .sideBar{
@@ -281,9 +324,9 @@ footer{
 }
 
 .footer-mid-section a{
-    margin: 10px 20px;
+    margin: 10px 13px;
     height: 21px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 21px;
     color: #ffffff;
     text-decoration: none;

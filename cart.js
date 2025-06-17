@@ -36,14 +36,41 @@ function displayCartData() {
                 
               </div>
               <div class="remove-quantity">
-                      <div>${item.quantity}</div>
                       <button class="remove-btn" data-id="${item.id}">Remove</button>
+                      <button class="save-btn">Save for later</button>
+                      <div class="quantity-counter-div">
+                        <button id="dec-btn" class="dec-btn">-</button>
+                        <span id="quantity-show">${item.quantity}</span>
+                        <button id="inc-btn" class="inc-btn">+</button>
+                      </div>
                     </div>
         `;
-
     // Append to the cart list
     cartSection.appendChild(cartItem);
   });
+
+  let IncBtn = document.getElementById("inc-btn");
+  let DecBtn = document.getElementById("dec-btn");
+  let quantityShow = document.getElementById("quantity-show");
+  let quantity = 0;
+
+  IncBtn.addEventListener("click", () => {
+    quantity++;
+    updateQuantity();
+  });
+
+  DecBtn.addEventListener("click", () => {
+    quantity--;
+    if(quantity < 1){
+      alert('add atleast one item')
+      return;
+    }
+    updateQuantity();
+  });
+
+  function updateQuantity(){
+    quantityShow.textContent = quantity;
+  }
 
   document.querySelectorAll(".remove-btn").forEach((button) => {
     button.addEventListener("click", (e) => {

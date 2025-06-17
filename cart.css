@@ -111,20 +111,55 @@
 
 .remove-quantity{
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
-    /* background: yellow; */
     padding: 10px 0;
 }
 
-.remove-btn{
-    padding: 10px 30px;
+.remove-btn, .save-btn{
+    height: 32px;
+    padding: 4px;
+    margin: 0 28px 0 0;
+    font-size: 14px;
+    line-height: 16px;
     border: none;
-    border-radius: 30px;
-    background-color: #f17474da;
-    color: #fff;
+    outline: none;
+    background: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.remove-btn:hover, .save-btn:hover{
+    color: #0053E2;
     text-decoration: none;
-    font-size: 1rem;
+}
+
+.quantity-counter-div{
+    width: 120px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+    border: 1px solid  rgb(194, 193, 193);
+    border-radius: 100px;
+}
+
+.dec-btn, .inc-btn{
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.dec-btn:hover, .inc-btn:hover{
+    background: #424141;
+    color: #ffffff;
 }
 
 .payment-section{
@@ -132,7 +167,7 @@
     height: 100%;
     margin-left: 20px;
     position: sticky;
-    top: 90px;
+    top: 148px;
 }
 
 .checkout-div{
