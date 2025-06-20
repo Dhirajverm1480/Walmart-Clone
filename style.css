@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Everyday-sans';
+    src: url('./assets/fonts/HelveticaNeueHeavy.otf') format('otf'),
+         url('./assets/fonts/HelveticaNeueHeavyItalic.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +13,13 @@
     font-family:sans-serif;
 }
 
-
-
 /* =====================================header ===================================== */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1;
+    /* font-family: 'Everyday-sans',; */
 }
 
 .top-nav {
