@@ -324,13 +324,13 @@ footer{
 }
 
 .footer-mid-section{
-    height: 103px;
+    /* height: 103px; */
     padding: 16px 59px 24px 59px;
     background: #002E99;
     text-align: center;
 }
 
-.footer-mid-section a{
+.footer-a{
     margin: 10px 13px;
     height: 21px;
     font-size: 12px;
