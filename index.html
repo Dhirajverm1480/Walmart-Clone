@@ -1,353 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/image1.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <title>Walmart-clone</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="responsive.css" />
-  <title>D-portfolio-one</title>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div class="div-nav-a">
-        <a href="#" class="logo">Dhiraj Verma</a>
-      </div>
-
-      <ul class="navlist">
-        <a href="#hero" class="nav-a">Home</a>
-        <a href="#about" class="nav-a">About</a>
-        <a href="#experience" class="nav-a">Work Experience</a>
-        <a href="#education" class="nav-a">Education</a>
-        <a href="#career" class="nav-a">Achievement</a>
-      </ul>
-
-      <div class="menu-bar">
-        <img id="menu-img" class="menu-img" src="./assets/sort.png" alt="menu" />
-      </div>
-    </nav>
-    <div class="menu-box">
-      <div class="menu">
-        <div id="close" class="close-box">
-          <img class="close-img" src="./assets/close.png" alt="" />
+  <body>
+    <header>
+      <nav class="top-nav">
+        <div id="menuBar" class="menuBar">
+          <img src="assets/bars-solid.svg" alt="" />
         </div>
-        <ul class="navlist">
-          <a href="#hero" class="nav-a">Home</a>
-          <a href="#about" class="nav-a">About</a>
-          <a href="#experience" class="nav-a">Work Experience</a>
-          <a href="#education" class="nav-a">Education</a>
-          <a href="#career" class="nav-a">Achievement</a>
-        </ul>
-      </div>
-    </div>
-  </header>
-  <main>
-    <section id="hero" class="hero-section section">
-      <div class="hero-div section-box">
-        <div class="hero-heading-div">
-          <h1 class="hero-heading">Tech Savvy Resume</h1>
-        </div>
-        <div class="hero-more-div">
-          <div class="hero-para-div">
-            <p>
-              Welcome to the profestional world of Dhiraj verma. Explore the
-              realm of cutting-edge
-            </p>
-            <p>
-              Technologies, innovative solutions, and a passion for excellence
-              in software engineering.
-            </p>
+        <a href="index.html" class="logo"
+          ><img src="assets/image1.png" alt=""
+        /></a>
+
+        <div class="deliveryBox">
+          <img src="assets/image.png" alt="" />
+          <div class="deliveryBox-info">
+            <p>PickUp or Delivery</p>
+            <p>Sacramento, 99999</p>
           </div>
-          <a href="#about" class="hero-btn-div">
-            <button class="hero-btn">View More</button>
-          </a>
         </div>
-        <div class="hero-img-container">
-          <img src="./assets/image1.png" alt="" />
+        <div class="search-wrapper">
+          <input
+            type="search"
+            placeholder="Search Everything at Walmart online and in store"
+          />
+          <hr />
+          <button>🔎</button>
         </div>
-      </div>
-    </section>
+        <div class="myitemBox">
+          <div>🤍</div>
+          <div>
+            <span>Reorder</span>
+            <span>My Items</span>
+          </div>
+          <div class="myItemDropDown">
+            <a href="">Reorder</a>
+            <a href="">List</a>
+            <a href="">Register </a>
+          </div>
+        </div>
+        <div class="accountBox">
+          <div>Sign In</div>
+          <div>Account</div>
+        </div>
+        <a href="cart.html" class="cartBox">
+          <div>🛒</div>
+          <div>$ 0.00</div>
+        </a>
+      </nav>
 
-    <section id="about" class="about-section section">
-      <div class="about-header-div">
-        <div class="about-heading-div">
-          <h1 class="about-heading">About</h1>
+      <nav class="mid-nav">
+        <div class="min-nav-dropDown">
+            <img src="" alt="">
+            <button class="depart-btn">Departmants</button>
+            <img src="" alt="">
         </div>
-        <div class="about-para-div">
-          <p class="about-p1">Professional Journey</p>
+        <div class="min-nav-dropDown">
+            <img src="" alt="">
+            <button class="service-btn">Services</button>
+            <img src="" alt="">
         </div>
-        <div class="about-journey-div">
-          <p class="about-journey">
-            Embark on a journey through the career of Dhiraj Verma, a seasoned
-            Web Developer with a solid track record in developing and
-            deploying top-notch web applications. Discover the blend of
-            expertise, creativity, and dedication that defines his
-            Professional ethos.
-          </p>
+        <span class="line-stick">|</span>
+        <div>
+            <a href="#" class="mid-nav-a">Get it Fast</a>
+            <a href="#" class="mid-nav-a">My Items</a>
+            <a href="" class="mid-nav-a">Pharmacy Delivery</a>
+            <a href="" class="mid-nav-a">Dinner Solution</a>
+            <a href="" class="mid-nav-a">4th of July</a>
+            <a href="" class="mid-nav-a">Trending</a>
+            <a href="" class="mid-nav-a">Swim Shop</a>
+            <a href="" class="mid-nav-a">New Arrival</a>
+            <a href="" class="mid-nav-a">Walmart+</a>
         </div>
-      </div>
+        
+        <div class="min-nav-dropDown">
+            <button class="more-btn">More</button>
+            <img src="" alt="">
+        </div>
+      </nav>
+    </header>
 
-      <section class="about-bottom-section">
-        <div class="about-img-container">
-          <img src="./assets/image.png" alt="" />
-        </div>
-        <div class="about-para-btn">
-          <p>
-            Dive deeper into the world of Dhiraj Verma, Where each line of
-            code tells a story of precision, collaboration, and a relentless
-            pursuit of excellence.
-          </p>
-          <a href="#career">
-            <button class="about-btn">Explore</button>
-          </a>
+    <main>
+      <!-- <aside id="sideBar" class="sideBar">
+            <div class="side-top">
+                <a href="index.html" class="logo"><img src="assets/image1.png" alt=""></a>
+                <span>Sign in or create account</span>
+            </div>
+            
+            <div>
+                <span>Language | English</span>
+            </div>
+            <hr>
+            <div>
+                <span>Walmart +</span>
+            </div>
+            <hr>
+            <div>
+                <p>Purchase History</p>
+                <p>My Items</p>
+                <p>Account</p>
+            </div>
+            <hr>
+            <div>
+                <p>Help</p>
+            </div>
+            <hr>
+            <div>
+                <p>Lists</p>
+                <p>Registries</p>
+            </div>
+            <hr>
+            <div>
+                <p>Departments</p>
+                <p>Services</p>
+            </div>
+            <div>
+                <p>Give Feedback</p>
+            </div>
+        </aside> -->
+
+      <section id="home" class="product-box">
+        <div class="product-section"></div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer-top-section">
+        <div class="footer-cover-div">
+          <p>We'd Love to hear what you think!</p>
+          <button>Give feedback</button>
         </div>
       </section>
-    </section>
-
-    <section id="experience" class="experience-section section">
-      <div class="experience-header-div header-div">
-        <div class="experience-heading-div">
-          <h2 class="experience-heading">Experience</h2>
-          <p class="prof-time-p">Professional Timeline</p>
-        </div>
-      </div>
-      <div class="bottom-line-div">
-        <div class="bottom-line"></div>
-      </div>
-
-      <div class="experience-detail-div">
-        <div class="role-div">
-          <h3 class="role-heading">Lead Developer</h3>
-          <p class="project-title">Innovative Project</p>
-        </div>
-        <div class="project-detail-div">
-          <p class="project-detail">
-            Led groundbreaking projects with a focus on innovation and
-            efficiency, collaborating with cross-functional teams to deliver
-            cutting-edge solutions.
-          </p>
-        </div>
-      </div>
-      <div class="bottom-line-div">
-        <div class="bottom-line"></div>
-      </div>
-    </section>
-
-    <section id="education" class="education-section section">
-      <div class="education-header-div header-div">
-        <div class="education-heading-div">
-          <h2 class="education-heading">Education</h2>
-          <p class="academic-heading">Academic Achievement</p>
-        </div>
-      </div>
-      <div class="bottom-line-div">
-        <div class="bottom-line"></div>
-      </div>
-      <section class="degree-section">
-        <div class="degree-div">
-          <p class="degree-heading">Bachelor's of Computer Application</p>
-          <div class="bottom-line-div">
-            <div class="bottom-line"></div>
-          </div>
-        </div>
-        <div class="degree-div">
-          <p class="degree-heading">Certificate of React Development</p>
-          <div class="bottom-line-div">
-            <div class="bottom-line"></div>
-          </div>
-        </div>
-        <div class="degree-div">
-          <p class="degree-heading">Bachelor's of Computer Application</p>
-          <div class="bottom-line-div">
-            <div class="bottom-line"></div>
-          </div>
-        </div>
+      <section class="footer-mid-section">
+        <a href="#home" class="footer-a">All Departments</a>
+        <a href="#home" class="footer-a">Store Directory</a>
+        <a href="#home" class="footer-a">Careers</a>
+        <a href="#home" class="footer-a">Our Company</a>
+        <a href="#home" class="footer-a">Sell on Walmart.com</a>
+        <a href="#home" class="footer-a">Help</a>
+        <a href="#home" class="footer-a">Product Recalls</a>
+        <a href="#home" class="footer-a">Accessibility</a>
+        <a href="#home" class="footer-a">Tax Exempt Program</a>
+        <a href="#home" class="footer-a">Get the Walmart App</a>
+        <a href="#home" class="footer-a">Safety Data Sheet</a>
+        <a href="#home" class="footer-a">Terms of Use</a>
+        <a href="#home" class="footer-a">Privacy Notice</a>
+        <a href="#home" class="footer-a">California Supply Chain Act</a>
+        <a href="#home" class="footer-a">Your Privacy Choices</a>
+        <a href="#home" class="footer-a">Notice at Collection</a>
+        <a href="#home" class="footer-a">AdChoices</a>
+        <a href="#home" class="footer-a"
+          >Consumer Health Data Privacy Notices</a
+        >
+        <a href="#home" class="footer-a">Brand Shop Directory</a>
+        <a href="#home" class="footer-a">Pharmacy</a>
+        <a href="#home" class="footer-a">Walmart Business</a>
+        <a href="#home" class="footer-a">#IYWYK</a>
+        <a href="#home" class="footer-a">Delete Account</a>
       </section>
-    </section>
-
-    <section id="career" class="career-section section">
-      <div class="career-header-div header-div">
-        <div class="career-heading-div">
-          <h2 class="career-heading">Career Milestones</h2>
-          <p class="profesional-reco">Professional Recognitions</p>
-        </div>
-      </div>
-      <div class="bottom-line-div">
-            <div class="bottom-line"></div>
-          </div>
-      <section class="career-bottom-section">
-        <div class="career-flex-div">
-          <div class="career-box">
-            <h3 class="career-h3">Tech Award Winner</h3>
-            <p class="career-p-h">innovation Excellence</p>
-            <p class="career-para">
-              Recipient of the Tech innovation Award for groundbreaking
-              contributions of the field of software engineering.
-            </p>
-          </div>
-
-          <div class="career-box">
-            <h3 class="career-h3">Tech Award Winner</h3>
-            <p class="career-p-h">innovation Excellence</p>
-            <p class="career-para">
-              Recipient of the Tech innovation Award for groundbreaking
-              contributions of the field of software engineering.
-            </p>
-          </div>
-
-          <div class="career-box">
-            <h3 class="career-h3">Tech Award Winner</h3>
-            <p class="career-p-h">innovation Excellence</p>
-            <p class="career-para">
-              Recipient of the Tech innovation Award for groundbreaking
-              contributions of the field of software engineering.
-            </p>
-          </div>
-
-          <div class="career-box">
-            <h3 class="career-h3">Tech Award Winner</h3>
-            <p class="career-p-h">innovation Excellence</p>
-            <p class="career-para">
-              Recipient of the Tech innovation Award for groundbreaking
-              contributions of the field of software engineering.
-            </p>
-          </div>
-
-          <div class="career-box">
-            <h3 class="career-h3">Tech Award Winner</h3>
-            <p class="career-p-h">innovation Excellence</p>
-            <p class="career-para">
-              Recipient of the Tech innovation Award for groundbreaking
-              contributions of the field of software engineering.
-            </p>
-          </div>
-
-          <div class="career-box">
-            <h3 class="career-h3">Tech Award Winner</h3>
-            <p class="career-p-h">innovation Excellence</p>
-            <p class="career-para">
-              Recipient of the Tech innovation Award for groundbreaking
-              contributions of the field of software engineering.
-            </p>
-          </div>
-        </div>
+      <section class="footer-buttom-section">
+        @ 2025 Walmart. The trademarks Walmart and the Walmart Spark design are
+        registered with the US Patent and Trademark Office. All Rights Reserved.
       </section>
-    </section>
-
-    <section id="contact" class="contact-section section">
-      <div class="contact-main-div">
-        <div class="contact-header-div">
-          <h2 class="contact-heading">Contact</h2>
-          <p class="contact-para">
-            Get in touch with us for any inquiries or feedback. We are here to
-            assist you.
-          </p>
-        </div>
-        <div class="contact-form-container">
-          <div class="form-div">
-            <div class="name-summary-div">
-              <div class="name-div input-box-flex">
-                <div class="label-div">
-                  <label id="label-name" for="name-input">Name *</label>
-                </div>
-                <div class="name-box">
-                  <div class="name-input">
-                    <div class="input-inner-div">
-                      <input type="text" />
-                    </div>
-                  </div>
-                  <div class="input-bottom-line"></div>
-                </div>
-              </div>
-              <div class="Summary-div input-box-flex">
-                <div class="label-div">
-                  <label id="label-name" for="name-input">Summary *</label>
-                </div>
-                <div class="name-box">
-                  <div class="name-input">
-                    <div>
-                      <div class="input-inner-div">
-                        <input type="text" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="input-bottom-line"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="email-box-div form-input-div">
-              <div class="label-div">
-                <label id="label-name" for="">Email*</label>
-              </div>
-              <div class="input-box">
-                <input type="text" />
-              </div>
-              <div class="input-bottom-line"></div>
-            </div>
-
-            <div class="phone-box-div form-input-div">
-              <div class="label-div">
-                <label id="label-name" for="">Phone *</label>
-              </div>
-              <div class="input-box">
-                <div class="icon-cont"></div>
-                <input type="text" />
-              </div>
-              <div class="input-bottom-line"></div>
-            </div>
-
-            <div class="message-box-div form-input-div">
-              <div class="label-div">
-                <label id="label-name" for="">Message *</label>
-              </div>
-              <div class="input-box">
-                <textarea name="" id=""></textarea>
-              </div>
-              <div class="input-bottom-line"></div>
-            </div>
-
-            <div class="form-btn-div">
-              <button class="form-btn">Send</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer" class="footer">
-    <div class="footer-div">
-      <div class="top-line-div"></div>
-      <div class="footer-flex">
-        <div class="footer-flex-inner footer-left-flex">
-          <p class="footer-heading"><a href="#">Dhiraj Verma</a></p>
-          <div class="contact-box">
-            <div class="footer-contact">
-              <p>6391732413</p>
-              <p><a href="#">dhirajv418@gmail.com</a></p>
-            </div>
-            <p class="address">Mayur vihar phase III, Delhi India</p>
-          </div>
-        </div>
-        <div class="footer-flex-inner footer-right-flex">
-          <div class="policy-box">
-            <div class="footer-policy">
-              <p><a href="#">Privacy Policy</a></p>
-              <p><a href="#">Accessibility Statement</a></p>
-            </div>
-          </div>
-          <div class="copyright">
-            <p>@ 2026 by Dhiraj Verma.</p>
-          </div>
-        </div>
-      </div>
-      <div class="bottom-line-div"></div>
-    </div>
-  </footer>
-  <script src="main.js"></script>
-</body>
-
+    </footer>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
