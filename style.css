@@ -184,6 +184,7 @@ main{
     width: 227px;
     display: flex;
     justify-content: right;
+    text-decoration: none;
 }
 
 .hero-btn{
@@ -196,6 +197,12 @@ main{
     outline: none;
     font-size: 16px;
     font-family: sans-serif;
+}
+
+.hero-btn:hover{
+    background: #f9f6f6;
+    color: #000;
+    border: 1px solid #000;
 }
 
 .hero-img-container{
@@ -596,6 +603,7 @@ main{
 .name-input{
     width: 208px;
     height: 40px;
+    color: #f9f6f6;
 }
 
 .input-inner-div{
@@ -646,6 +654,7 @@ main{
     padding: 8px 2px 8px 12px;
     border: none;
     outline: none;
+    color: #f9f6f6;
     background: transparent;
 }
 
@@ -683,6 +692,7 @@ main{
     background: transparent;
     border: none;
     outline: none;
+    color: #f9f6f6;
 }
 
 .form-btn-div{
@@ -707,7 +717,6 @@ main{
 .footer{
     display: flex;
     justify-content: center;
-    /* background: yellow; */
 }
 
 .footer-div{
