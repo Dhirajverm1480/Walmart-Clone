@@ -1,0 +1,47 @@
+@media screen and (max-width: 414px) {
+    .cartMain{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* padding: 0; */
+        margin: 0;
+        /* background: red; */
+    }
+
+    .cartItem{
+        width: 100%;
+        height: 300px;
+    }
+
+    .free-shipping{
+        width: 100%;
+    }
+
+    .cart-item-div-flex{
+        width: 100%;
+        height: 100%;
+        /* display: flex; */
+    }
+
+    .cartTitle{
+        width: 100%;
+    }
+
+    .return-policy{
+        width: 100%;
+    }
+
+    .gift-div{
+        width: 100%;
+    }
+
+    .price-div{
+        width: 100%;
+        margin: 0;
+    }
+
+    .payment-section{
+        width: 100%;
+        margin: 10px 0 8px 10px;
+    }
+}

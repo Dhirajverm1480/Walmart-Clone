@@ -1,5 +1,35 @@
-@media screen and (max-width: 1023px) {
-    
+@media screen and (max-width: 1242px){
+    .myitemBox{
+        display: none;
+    }
+    .accountBox{
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 1193px) {
+    .mid-a-container{
+        width: 100%;
+    }
+    .mid-nav-a{
+        font-size: 12px;
+    }
+
+    .min-nav-dropDown{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1078px){
+    .top-nav{
+        display: flex;
+        align-items: center;
+        /* padding: 5px 12px; */
+    }
+
     .menuBar{
         display: block;
     }
@@ -7,36 +37,89 @@
     .deliveryBox{
         display: none;
     }
-
-    .myitemBox{
+    .mid-a-container{
         display: none;
     }
-    
-    .accountBox{
-        display: none;
+
+    .more-btn{
+        position: absolute;
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 742px) {
+    .top-nav{
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .search-wrapper{
+        width: 500px;
     }
 }
 
 @media screen and (max-width: 414px) {
+    .top-nav{
+        width: 100%;
+        /* height: 84px; */
+        padding: 16px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menuBar{
+        width: 25px;
+    }
+
+    .logo img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .search-wrapper{
+        width: 236px;
+        height: 52px;
+    }
+
     .mid-a-container{
         display: none;
     }
 
     .footer-mid-section{
         width: 100%;
-        /* height: 100%; */
         display: flex;
         flex-direction: column;
-        align-items: start;
+        text-align: left;
         margin: 0;
-        padding: 0;
-        background: #ffff;
-        
+        padding: 0 0 0 10px;
+        background: #ffffff;
     }
 
     .footer-a{
-        /* width: 100%; */
         color: #000;
+        width: 100%;
+        margin: 10px 0;
         border-bottom: 1px solid #000;
+    }
+
+    .footer-bottom-section{
+        width: 100%;
+        padding: 0 4px;
+    }
+}
+
+@media screen and (max-width: 396px){
+    .product-section{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 376px){
+    .product-wrapper{
+        width: 155px;
     }
 }

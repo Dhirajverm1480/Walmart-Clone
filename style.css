@@ -19,6 +19,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
+    
     /* font-family: 'Everyday-sans',; */
 }
 
@@ -33,7 +34,8 @@ header {
 
 .menuBar{
     display: none;
-    width: 20px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 
@@ -193,6 +195,11 @@ header {
 .mid-nav-a:hover{
     text-decoration: underline;
 }
+
+.min-nav-dropDown{
+    display: flex;
+    align-items: center;
+}
 /* ========================================= Main ==================================================== */
 
 .sideBar{
@@ -340,7 +347,7 @@ footer{
     cursor: pointer;
 }
 
-.footer-buttom-section{
+.footer-bottom-section{
     height: 51px;
     padding: 8px 0 28px 0;
     display: flex;
