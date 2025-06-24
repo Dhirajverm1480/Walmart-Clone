@@ -12,4 +12,8 @@
     .productInfo-container{
         width: 100%;
     }
+    
+    .category-section{
+        padding: 0;
+    }
 }
