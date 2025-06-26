@@ -1,4 +1,5 @@
 import addToCart from "./utility/addToCart.js";
+import addToWish from "./utility/addToWish.js"
 
 const dataFetchng = async () => {
   try {
@@ -37,6 +38,7 @@ const dataFetchng = async () => {
       const wistBtn = productWrapper.querySelector(".wish-btn");
       wistBtn.addEventListener("click", () => {
         wistBtn.innerHTML = "🧡";
+        addToWish(product);
       });
     });
   } catch (error) {
@@ -66,3 +68,9 @@ document.addEventListener("keydown", (e) => {
   //   SideBar.style.display = 'block';
   // }
 });
+
+let myItemBox = document.querySelector('.myitemBox')
+let myDropDown = document.querySelector('.myItemDropDown')
+myItemBox.addEventListener('click', (e) => {
+  myDropDown.style.display = 'block'
+})

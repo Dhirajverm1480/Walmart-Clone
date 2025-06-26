@@ -117,21 +117,24 @@ header {
 
 .myitemBox .myItemDropDown{
     position: absolute;
-    visibility: hidden;
-    top: 54px;
+    display: none;
+    top: 68px;
     width: 100%;
     padding: 15px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 1px 1px 1px grey;
+    box-shadow: 1px 1px 10px grey;
+    background: #f9f6f6;
 }
 
-.myitemBox:hover{
+.myItemDropDown a{
+    color: #000;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.myitemBox.active{
     background-color:  #002e99;
-}
-
-.myitemBox:hover .myItemDropDown{
-    visibility: visible;
 }
 
 .accountBox, .cartBox {
