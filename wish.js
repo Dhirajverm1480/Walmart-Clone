@@ -1,4 +1,4 @@
-import addToCart from "./utility/addToCart";
+import addToCart from "./utility/addToCart.js";
 document.addEventListener("DOMContentLoaded", () => {
   displayWishData();
 });
