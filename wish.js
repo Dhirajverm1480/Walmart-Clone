@@ -19,7 +19,7 @@ function displayWishData() {
     productWrapper.classList.add("product-wrapper");
 
     productWrapper.innerHTML = `
-                <button class="wish-btn">🤍</button>
+                <button class="wish-btn">🧡</button>
                 <a href="productInfo.html?id=${item.id}">
                     
                     <img src="${item.image}" alt="${item.title}" class="wrapper-img"/>

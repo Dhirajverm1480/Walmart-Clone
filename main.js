@@ -50,6 +50,7 @@ dataFetchng();
 
 let MenuBar = document.getElementById("menuBar");
 let SideBar = document.getElementById("sideBar");
+let contentContainer = document.querySelector('.content-container')
 
 MenuBar.addEventListener("click", () => {
   console.log("I am click");
@@ -58,6 +59,14 @@ MenuBar.addEventListener("click", () => {
   } else {
     SideBar.style.display = "block";
   }
+  // if(SideBar.style.width === '90%'){
+  //   SideBar.style.width = '0%'
+  //   contentContainer.style.width = '100%'
+  // }else{
+  //   SideBar.style.width = '80%'
+  //   contentContainer.style.width = '20%'
+  // }
+  
 });
 
 document.addEventListener("keydown", (e) => {
