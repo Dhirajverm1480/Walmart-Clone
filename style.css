@@ -1,4 +1,4 @@
-@font-face {
+\@font-face {
     font-family: 'Everyday-sans';
     src: url('./assets/fonts/HelveticaNeueHeavy.otf') format('otf'),
          url('./assets/fonts/HelveticaNeueHeavyItalic.otf') format('otf');
@@ -17,10 +17,29 @@
 
 .sideBar{
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    
+    height: 100vh;
     /* width: 300px; */
     padding: 0 20px;
     border-right: 1px solid gray;
     background: #fff;
+}
+
+#close{
+    position: absolute;
+    top: 10px;
+    right: 2%;
+    z-index: 30;
+    width: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .side-top{
@@ -44,8 +63,6 @@
 }
 
 .side-bottom{
-    position: sticky;
-    top: 130px;
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -54,6 +71,15 @@
 .side-bottom div{
     padding: 10px 0;
     line-height:30px;
+}
+
+.side-bottom a{
+    color: #000;
+    text-decoration: none;
+}
+
+.side-bottom a:hover{
+    color: #0053e2;
 }
 
 /* =====================================header ===================================== */
@@ -377,4 +403,24 @@ footer{
     line-height: 15px;
     background: #002E99;
     color: #ffffff;
+}
+
+.feed-side-box{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    width: 300px;
+    height: 100vh;
+    background: #0053e2;
+}
+
+.feed-box{
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

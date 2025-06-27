@@ -50,7 +50,7 @@ dataFetchng();
 
 let MenuBar = document.getElementById("menuBar");
 let SideBar = document.getElementById("sideBar");
-let contentContainer = document.querySelector('.content-container')
+let Close = document.getElementById('close')
 
 MenuBar.addEventListener("click", () => {
   console.log("I am click");
@@ -59,15 +59,11 @@ MenuBar.addEventListener("click", () => {
   } else {
     SideBar.style.display = "block";
   }
-  // if(SideBar.style.width === '90%'){
-  //   SideBar.style.width = '0%'
-  //   contentContainer.style.width = '100%'
-  // }else{
-  //   SideBar.style.width = '80%'
-  //   contentContainer.style.width = '20%'
-  // }
-  
 });
+
+Close.addEventListener('click', () => {
+  SideBar.style.display = "none";
+})
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
@@ -80,6 +76,24 @@ document.addEventListener("keydown", (e) => {
 
 let myItemBox = document.querySelector('.myitemBox')
 let myDropDown = document.querySelector('.myItemDropDown')
-myItemBox.addEventListener('click', (e) => {
-  myDropDown.style.display = 'block'
+myItemBox.addEventListener('click', () => {
+  if(myDropDown.style.display === 'block'){
+    myDropDown.style.display = 'none'
+  } else{
+    myDropDown.style.display = 'block'
+  }
+})
+
+
+// Feed 
+
+let feedBtn = document.getElementById("feedBtn")
+let feedBox = document.querySelector(".feed-side-box")
+feedBtn.addEventListener("click", () => {
+  console.log("Ok")
+  if (feedBox.style.display === "block") {
+    feedBox.style.display = "none";
+  } else {
+    feedBox.style.display = "block";
+  }
 })
