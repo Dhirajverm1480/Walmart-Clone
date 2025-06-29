@@ -60,11 +60,13 @@ function displayCartData() {
   });
 
   DecBtn.addEventListener("click", () => {
-    quantity--;
-    if(quantity < 1){
+    
+    if(quantity <= 1){
       alert('add atleast one item')
       return;
     }
+    quantity--;
+    
     updateQuantity();
   });
 
