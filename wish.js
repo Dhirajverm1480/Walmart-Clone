@@ -43,7 +43,7 @@ function displayWishData() {
     wishSection.appendChild(productWrapper);
     const cartBtn = productWrapper.querySelector(".cart-btn");
     cartBtn.addEventListener("click", () => {
-      addToCart(product);
+      addToCart(item);
     });
   });
 }
