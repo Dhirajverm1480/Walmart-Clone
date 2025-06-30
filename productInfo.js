@@ -1,4 +1,16 @@
 import addToCart from "./utility/addToCart.js";
+import NavBar from "./components/navbar.js";
+import SideBarDiv from "./components/sideBar.js";
+import FooterDiv from "./components/footer.js";
+
+const Header = document.getElementById("header");
+Header.appendChild(NavBar())
+
+const SideBar = document.getElementById("sideBar");
+SideBar.appendChild(SideBarDiv())
+
+const Footer = document.getElementById('footer')
+Footer.appendChild(FooterDiv())
 
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");

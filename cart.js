@@ -1,4 +1,17 @@
+import NavBar from "./components/navbar.js";
+import SideBarDiv from "./components/sideBar.js";
+import FooterDiv from "./components/footer.js";
+
 document.addEventListener("DOMContentLoaded", () => {
+  const Header = document.getElementById("header");
+  Header.appendChild(NavBar());
+
+  const SideBar = document.getElementById("sideBar");
+  SideBar.appendChild(SideBarDiv());
+
+  const Footer = document.getElementById("footer");
+  Footer.appendChild(FooterDiv());
+
   displayCartData();
 });
 
@@ -60,17 +73,16 @@ function displayCartData() {
   });
 
   DecBtn.addEventListener("click", () => {
-    
-    if(quantity <= 1){
-      alert('add atleast one item')
+    if (quantity <= 1) {
+      alert("add atleast one item");
       return;
     }
     quantity--;
-    
+
     updateQuantity();
   });
 
-  function updateQuantity(){
+  function updateQuantity() {
     quantityShow.textContent = quantity;
   }
 
