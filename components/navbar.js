@@ -43,7 +43,7 @@ function NavBar() {
         </div>
         <a href="cart.html" class="cartBox">
           <div>🛒</div>
-          <div>$ 0.00</div>
+          <div id="cartPrice">$ 0.00</div>
         </a>
       </nav>
 
@@ -110,7 +110,23 @@ function NavBar() {
     //   SideBar.style.display = 'block';
     // }
   });
+
+  // cart Data
+
+  cartPriceAdd(Nav);
+
   return Nav;
 }
 
 export default NavBar;
+
+function cartPriceAdd(Nav){
+  // let cartBox = Nav.querySelector('.cartBox')x
+  let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+  let cartPriceElement = Nav.querySelector("#cartPrice");
+
+  // If cartData is an array of items with `price` property
+  const total = cartData.reduce((sum, item) => sum + (item.price || 0), 0);
+
+  cartPriceElement.textContent = `$ ${total.toFixed(2)}`;
+}

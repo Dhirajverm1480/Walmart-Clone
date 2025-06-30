@@ -2,16 +2,20 @@ import NavBar from "./components/navbar.js";
 import FooterDiv from "./components/footer.js";
 import SideBarDiv from "./components/sideBar.js";
 import addToCart from "./utility/addToCart.js";
-import addToWish from "./utility/addToWish.js"
+import addToWish from "./utility/addToWish.js";
 
-const Header = document.getElementById("header");
-Header.appendChild(NavBar())
+displayComponent();
 
-const SideBar = document.getElementById("sideBar");
-SideBar.appendChild(SideBarDiv())
+function displayComponent() {
+  const Header = document.getElementById("header");
+  Header.appendChild(NavBar());
 
-const Footer = document.getElementById('footer')
-Footer.appendChild(FooterDiv())
+  const SideBar = document.getElementById("sideBar");
+  SideBar.appendChild(SideBarDiv());
+
+  const Footer = document.getElementById("footer");
+  Footer.appendChild(FooterDiv());
+}
 
 const dataFetchng = async () => {
   try {
@@ -60,22 +64,6 @@ const dataFetchng = async () => {
 
 dataFetchng();
 
-// let MenuBar = document.getElementById("menuBar");
-// let Close = document.getElementById('close')
-
-// MenuBar.addEventListener("click", () => {
-//   console.log("I am click");
-//   if (SideBar.style.display === "block") {
-//     SideBar.style.display = "none";
-//   } else {
-//     SideBar.style.display = "block";
-//   }
-// });
-
-// Close.addEventListener('click', () => {
-//   SideBar.style.display = "none";
-// })
-
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     SideBar.style.display = "none";
@@ -85,26 +73,15 @@ document.addEventListener("keydown", (e) => {
   // }
 });
 
-// let myItemBox = document.querySelector('.myitemBox')
-// let myDropDown = document.querySelector('.myItemDropDown')
-// myItemBox.addEventListener('click', () => {
-//   if(myDropDown.style.display === 'block'){
-//     myDropDown.style.display = 'none'
-//   } else{
-//     myDropDown.style.display = 'block'
-//   }
-// })
+// Feed
 
-
-// Feed 
-
-let feedBtn = document.getElementById("feedBtn")
-let feedBox = document.querySelector(".feed-side-box")
+let feedBtn = document.getElementById("feedBtn");
+let feedBox = document.querySelector(".feed-side-box");
 feedBtn.addEventListener("click", () => {
-  console.log("Ok")
+  console.log("Ok");
   if (feedBox.style.display === "block") {
     feedBox.style.display = "none";
   } else {
     feedBox.style.display = "block";
   }
-})
+});
