@@ -211,6 +211,11 @@ header {
     text-decoration: none;
 }
 
+.accountBox a{
+    color: #f9f6f6;
+    text-decoration: none;
+}
+
 /* ===================== Mid nav====================== */
 
 .mid-nav{

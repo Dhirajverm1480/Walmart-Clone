@@ -38,7 +38,7 @@ function NavBar() {
           </div>
         </div>
         <div class="accountBox">
-          <div>Sign In</div>
+          <a href="registeration.html">Sign In</a>
           <div>Account</div>
         </div>
         <a href="cart.html" class="cartBox">
