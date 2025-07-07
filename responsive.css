@@ -1,3 +1,9 @@
+@media screen and (max-width: 2560px) {
+    .product-wrapper{
+        width: 16%;
+    }
+}
+
 @media screen and (max-width: 1440px) {
     .product-wrapper{
         width: 16%;
